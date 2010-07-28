@@ -1,0 +1,36 @@
+<% title "Toilet" %>
+
+<p>
+  <strong>Street Address:</strong>
+  <%=h @toilet.street-address %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%=h @toilet.city %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%=h @toilet.state %>
+</p>
+<p>
+  <strong>Zip:</strong>
+  <%=h @toilet.zip %>
+</p>
+<p>
+  <strong>Rating:</strong>
+  <%=h @toilet.rating %>
+</p>
+<p>
+  <strong>Lat:</strong>
+  <%=h @toilet.lat %>
+</p>
+<p>
+  <strong>Lng:</strong>
+  <%=h @toilet.lng %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_toilet_path(@toilet) %> |
+  <%= link_to "Destroy", @toilet, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", toilets_path %>
+</p>

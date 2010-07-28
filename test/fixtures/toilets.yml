@@ -1,0 +1,17 @@
+one:
+  street-address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  rating: 
+  lat: 1.5
+  lng: 1.5
+
+two:
+  street-address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  rating: 
+  lat: 1.5
+  lng: 1.5
