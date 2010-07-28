@@ -3,7 +3,7 @@ one:
   city: MyString
   state: MyString
   zip: MyString
-  rating: 
+  rating: 1
   lat: 1.5
   lng: 1.5
 
@@ -12,6 +12,6 @@ two:
   city: MyString
   state: MyString
   zip: MyString
-  rating: 
+  rating: 1
   lat: 1.5
   lng: 1.5
