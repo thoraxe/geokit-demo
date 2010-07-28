@@ -1,5 +1,5 @@
 one:
-  street-address: MyString
+  street_address: MyString
   city: MyString
   state: MyString
   zip: MyString
@@ -8,7 +8,7 @@ one:
   lng: 1.5
 
 two:
-  street-address: MyString
+  street_address: MyString
   city: MyString
   state: MyString
   zip: MyString
