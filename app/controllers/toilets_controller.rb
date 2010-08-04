@@ -1,4 +1,9 @@
 class ToiletsController < ApplicationController
+  
+  def find
+    @toilets = Toilet.find(:all, :origin => params[:find][:address], :within => params[:find][:distance])
+  end
+
   def index
     @toilets = Toilet.all
   end

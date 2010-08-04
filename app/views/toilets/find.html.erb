@@ -7,8 +7,7 @@
     <th>State</th>
     <th>Zip</th>
     <th>Rating</th>
-    <th>Lat</th>
-    <th>Lng</th>
+    <th>Dist</th>
   </tr>
   <% for toilet in @toilets %>
     <tr>
@@ -17,16 +16,10 @@
       <td><%=h toilet.state %></td>
       <td><%=h toilet.zip %></td>
       <td><%=h toilet.rating %></td>
-      <td><%=h toilet.lat %></td>
-      <td><%=h toilet.lng %></td>
-      <td><%= link_to "Show", toilet %></td>
-      <td><%= link_to "Edit", edit_toilet_path(toilet) %></td>
-      <td><%= link_to "Destroy", toilet, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%=h toilet.distance %></td>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Toilet", new_toilet_path %></p>
 
 <h2>Find a toilet</h2>
 <%= form_tag '/toilets/find' %>

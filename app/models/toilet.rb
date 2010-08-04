@@ -1,5 +1,5 @@
 class Toilet < ActiveRecord::Base
-  attr_accessible :street_address, :city, :state, :zip, :rating, :lat, :lng
+  attr_accessible :street_address, :city, :state, :zip, :rating
   acts_as_mappable :auto_geocode => true
 
   def address
