@@ -2,6 +2,19 @@ class ToiletsController < ApplicationController
   
   def find
     @toilets = Toilet.find(:all, :origin => params[:find][:address], :within => params[:find][:distance])
+
+    # want to find lat/lng for the entered address to center the map
+    location = Geokit::Geocoders::MultiGeocoder.geocode(params[:find][:address])
+
+    #map stuff
+    @map = GMap.new("map_div")
+    @map.control_init(:large_map => true,:map_type => true)
+    @map.center_zoom_init([location.lat,location.lng],12)
+
+    @toilets.each do |toilet|
+      @map.overlay_init(GMarker.new([toilet.lat,toilet.lng], :info_window => "#{toilet.rating} star(s)<br>#{toilet.distance} mi" ))
+    end
+
   end
 
   def index

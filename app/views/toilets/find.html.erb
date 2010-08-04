@@ -26,3 +26,8 @@
   <input id="find_address" name="find[address]" size="30" type="text" value="Enter your address" />
   <input id="find_distance" name="find[distance]" size="5" type="text" value="dist" />
 <%= submit_tag 'Find toilet!' %>
+
+<% content_for :head do %>
+  <%= @map.to_html %>
+<% end %>
+<%= @map.div(:width => 600, :height => 400) %>
